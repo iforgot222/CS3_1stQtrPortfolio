@@ -1,9 +1,20 @@
+
 <script>
-    let age=14;
-    let maxAge=100;
-    let numPerDay=2;
-    let totalRequired = (numPerDay * 365) * (maxAge - age);
+    let age= window.prompt("Enter your age: ", 14);
+    let maxAge= window.prompt ("Would you like to live until: ", 100);
+    let numPerDay= window.prompt("Number of snacks daily: ", 2);
+    let snack= window.prompt("What snack do you eat?: ", "Crinkles");
 
-    document.write(`You will need ${totalRequired} of Crinkles to last you until the ripe old age of ${maxAge}.`)
+    let sure = window.confirm("Sure of your numbers? ");
 
+    if(sure) {
+        let totalRequired = (Number(numPerDay) * 365) * (Number(maxAge) - Number(age));
+
+        document.write(`You will need ${totalRequired} of ${snack} to last you until the ripe old age of ${maxAge}.`)
+        alert(`You will need ${totalRequired} of ${snack} to last you until the ripe old age of ${maxAge}.`)
+        console.log(`You will need ${totalRequired} of ${snack} to last you until the ripe old age of ${maxAge}.`)
+    }
+    else {
+        window.alert("Please click run again.")
+    }
 </script>
