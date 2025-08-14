@@ -16,11 +16,11 @@
         <input id="snack" />
     </label></br/>
 
-    <button onclick="checkresult()"> Accept Input</button> </p>
     <p> Result:
         <span id="resultHere"></span>
     </p>
 
+    <button onclick="checkresult()"> Accept Input</button> </p>
 
  <script> 
     function checkresult() {
@@ -31,10 +31,7 @@
 
          let totalRequired = (Number(numPerDay) * 365) * (Number(maxAge) - Number(age));
 
-         document.getElementById("resultHere").innerHTML = `You will need ${totalRequired} of ${snack} to last you until the ripe old age of ${maxAge}.`
-
-        
-
+         document.getElementById("resultHere").innerHTML = `<b> You will need ${totalRequired} of ${snack} to last you until the ripe old age of ${maxAge}. </b>`
     }
 
  </script>
